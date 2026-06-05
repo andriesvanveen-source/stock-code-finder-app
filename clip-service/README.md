@@ -1,3 +1,12 @@
+---
+title: StockSearch
+colorFrom: green
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # CLIP Service
 
 This service wraps OpenAI CLIP and returns normalized image embeddings for the Next.js app.
