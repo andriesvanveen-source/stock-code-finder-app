@@ -4,7 +4,7 @@ python-multipart==0.0.19
 pillow==11.0.0
 torch
 torchvision
-git+https://github.com/openai/CLIP.git
+open_clip_torch==2.30.0
 ftfy
 packaging
 regex
