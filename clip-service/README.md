@@ -9,7 +9,16 @@ pinned: false
 
 # CLIP Service
 
-This service wraps OpenAI CLIP and returns normalized image embeddings for the Next.js app.
+This service wraps OpenCLIP and returns normalized image embeddings for the Next.js app.
+
+The default model is:
+
+```text
+CLIP_MODEL_NAME=ViT-B-32
+CLIP_PRETRAINED=laion2b_s34b_b79k
+```
+
+It returns 512-dimensional embeddings, so it works with the existing Supabase schema.
 
 ## Recommended Hosting
 
@@ -37,6 +46,18 @@ Health check:
 
 ```bash
 curl http://localhost:8000/health
+```
+
+Expected live health response:
+
+```json
+{
+  "ok": true,
+  "device": "cpu",
+  "model": "ViT-B-32",
+  "pretrained": "laion2b_s34b_b79k",
+  "embedding_dim": 512
+}
 ```
 
 ## Hugging Face Spaces
