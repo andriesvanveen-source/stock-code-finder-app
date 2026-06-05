@@ -20,14 +20,18 @@ Vercel Project -> Settings -> Environment Variables
 NEXT_PUBLIC_SUPABASE_URL=https://eisrtplbgdpircthjosr.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-CLIP_SERVICE_URL=https://your-public-clip-service-url
+CLIP_SERVICE_URL=https://andries123-stocksearch.hf.space
 ```
 
 Do not commit `.env.local` to GitHub.
 
-## What Still Needs Hosting
+## CLIP Service
 
-The separate CLIP service is in `clip-service`.
+The CLIP service is live at:
+
+```text
+https://andries123-stocksearch.hf.space
+```
 
 It exposes:
 
@@ -36,15 +40,7 @@ POST /embed-image
 GET /health
 ```
 
-Good hosting options for it:
-
-- Hugging Face Spaces
-- Render
-- Railway
-- Fly.io
-- A company server or VM
-
-After that service is live, paste its public URL into Vercel as `CLIP_SERVICE_URL`.
+Use that value in Vercel as `CLIP_SERVICE_URL`.
 
 ## Vercel Import Flow
 
